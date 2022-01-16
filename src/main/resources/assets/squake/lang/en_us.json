@@ -1,12 +1,11 @@
 {
   "key.categories.squake": "Squake",
+  "key.squake.toggle": "Toggle Movement System",
+  "key.squake.toggle.enabled": "Movement system enabled",
+  "key.squake.toggle.disabled": "Movement system disabled",
 
   "title.squake.config": "Squake Config",
   "title.squake.general": "General",
-
-  "squake.key.toggle": "Toggle Movement System",
-  "squake.key.toggle.enabled": "Movement system enabled",
-  "squake.key.toggle.disabled": "Movement system disabled",
 
   "config_value.squake.enabled": "Enabled",
   "config_value.squake.sharkingEnabled": "Sharking enabled",
