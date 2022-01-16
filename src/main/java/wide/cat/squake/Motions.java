@@ -3,6 +3,7 @@ package wide.cat.squake;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Vec3d;
 
 public class Motions {
@@ -58,6 +59,12 @@ public class Motions {
     }
 
     public static boolean isOffsetPositionInLiquid(PlayerEntity player, double x, double y, double z) {
-        return player.doesNotCollide(x, y, z) && !player.world.containsFluid(player.getBoundingBox().offset(x, y, z));
+        Box box = player.getBoundingBox().offset(x, y, z);
+        return isLiquidPresentInAABB(player, box);
+    }
+
+    private static boolean isLiquidPresentInAABB(PlayerEntity player, Box bb)
+    {
+        return player.world.canCollide(player, bb) && !player.world.containsFluid(bb);
     }
 }

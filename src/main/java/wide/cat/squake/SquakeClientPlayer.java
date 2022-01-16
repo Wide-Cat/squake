@@ -25,8 +25,8 @@ public class SquakeClientPlayer {
 
     private static final List<float[]> baseVelocities = new ArrayList<>();
 
-    private static Method setDidJumpThisTick = null;
-    private static Method setIsJumping = null;
+    private static final Method setDidJumpThisTick = null;
+    private static final Method setIsJumping = null;
     private static final ConfigValues configValues = ConfigHandler.getConfigValues();
 
     public static boolean moveEntityWithHeading(PlayerEntity player, float sidemove, float upmove, float forwardmove) {
@@ -41,7 +41,7 @@ public class SquakeClientPlayer {
         double d1 = player.getY();
         double d2 = player.getZ();
 
-        if((player.getAbilities().flying || player.isFallFlying()) && player.getVehicle() == null)
+        if((player.getAbilities().flying || player.isFallFlying() || player.isSwimming()) && player.getVehicle() == null)
             return false;
         else
             didQuakeMovement = quake_moveEntityWithHeading(player, sidemove, upmove, forwardmove);
@@ -91,7 +91,7 @@ public class SquakeClientPlayer {
             return false;
         }
 
-        // this is probably wrong, but its what was there in 1.10.2
+        // this is probably wrong, but it's what was there in 1.10.2
         float wishspeed = friction;
         wishspeed *= 2.15f;
         float[] wishdir = getMovementDirection(player, sidemove, forwardmove);
@@ -271,7 +271,7 @@ public class SquakeClientPlayer {
         float f6 = MathHelper.sqrt((float) (d0 * d0 + d1 * d1)) * 4.0F;
         if(f6 > 1.0F) f6 = 1.0F;
         player.limbDistance += (f6 - player.limbDistance) * 0.4F;
-        player.limbAngle += player.handSwingProgress;
+        player.limbAngle += player.limbDistance;
     }
 
     private static void minecraft_WaterMove(PlayerEntity player, float sidemove, float upmove, float forwardmove) {
@@ -450,7 +450,8 @@ public class SquakeClientPlayer {
         // get all relevant movement values
         float wishspeed = (sidemove != 0.0F || forwardmove != 0.0F) ? quake_getMaxMoveSpeed(player) : 0.0F;
         float[] wishdir = getMovementDirection(player, sidemove, forwardmove);
-        boolean isSharking = isJumping(player) && Motions.isOffsetPositionInLiquid(player, 0.0D, 1.0D, 0.0D);
+        boolean isOffsetInLiquid = player.world.getBlockState(new BlockPos(player.getX(), player.getY() + 1.0D, player.getZ())).getFluidState().isEmpty();
+        boolean isSharking = isJumping(player) && isOffsetInLiquid;
         double curspeed = getSpeed(player);
 
         if(!isSharking || curspeed < 0.078F) {
@@ -470,7 +471,7 @@ public class SquakeClientPlayer {
         }
 
         // water jump
-        if(player.horizontalCollision && Motions.isOffsetPositionInLiquid(player, Motions.getMotionX(player), Motions.getMotionY(player) + 0.6000000238418579D - player.getY() + posY, Motions.getMotionZ(player))) {
+        if(player.horizontalCollision && player.doesNotCollide(player.getVelocity().x, player.getVelocity().y + 0.6000000238418579D - player.getY() + posY, player.getVelocity().z)) {
             Motions.setMotionY(player, 0.30000001192092896D);
         }
 

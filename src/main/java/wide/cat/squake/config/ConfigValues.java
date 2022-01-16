@@ -2,7 +2,7 @@ package wide.cat.squake.config;
 
 public class ConfigValues {
     public Boolean enabled = true;
-    public Boolean sharkingEnabled = true;
+    public Boolean sharkingEnabled = false;
     public Boolean trimpingEnabled = true;
     public Boolean uncappedBunnyhopEnabled = true;
 
