@@ -1,0 +1,41 @@
+{
+  "key.categories.squake": "Squake",
+
+  "title.squake.config": "Squake Config",
+  "title.squake.general": "General",
+
+  "squake.key.toggle": "Toggle Movement System",
+  "squake.key.toggle.enabled": "Movement system enabled",
+  "squake.key.toggle.disabled": "Movement system disabled",
+
+  "config_value.squake.enabled": "Enabled",
+  "config_value.squake.sharkingEnabled": "Sharking enabled",
+  "config_value.squake.trimpingEnabled": "Trimping enabled",
+  "config_value.squake.uncappedBunnyhopEnabled": "Uncapped bunnyhop enabled",
+  "config_value.squake.accelerate": "Acceleration",
+  "config_value.squake.airAccelerate": "Air acceleration",
+  "config_value.squake.sharkingSurfTension": "Sharking surface tension",
+  "config_value.squake.trimpMult": "Trimping multiplier",
+  "config_value.squake.sharkingWaterFriction": "Sharking water friction",
+  "config_value.squake.maxAirAccelerationPerTick": "Max air acceleration per tick",
+  "config_value.squake.softCap": "Soft cap",
+  "config_value.squake.hardCap": "Hard cap",
+  "config_value.squake.softCapDegen": "Soft cap degeneration",
+  "config_value.squake.increasedFallDistance": "Increased fall distance",
+
+
+  "tooltip.squake.enabled": "Turns off/on the quake-style movement for the client (essentially the saved value of the ingame toggle keybind)",
+  "tooltip.squake.sharkingEnabled": "If enabled, holding jump while swimming at the surface of water allows you to glide",
+  "tooltip.squake.trimpingEnabled": "If enabled, holding sneak while jumping will convert your horizontal speed into vertical speed",
+  "tooltip.squake.uncappedBunnyhopEnabled": "If enabled, the soft and hard caps will not be applied at all",
+  "tooltip.squake.accelerate": "A higher value means you accelerate faster on the ground",
+  "tooltip.squake.airAccelerate": "A higher value means you can turn more sharply in the air without losing speed",
+  "tooltip.squake.sharkingSurfTension": "Amount of downward momentum you lose while entering water, a higher value means that you are able to shark after hitting the water from higher up",
+  "tooltip.squake.trimpMult": "A lower value means less horizontal speed converted to vertical speed and vice versa",
+  "tooltip.squake.sharkingWaterFriction": "Amount of friction while sharking (between 0 and 1)",
+  "tooltip.squake.maxAirAccelerationPerTick": "A higher value means faster air acceleration",
+  "tooltip.squake.softCap": "See uncappedBunnyhopEnabled and softCapDegen; soft cap speed = (moveSpeed*softCapThreshold)",
+  "tooltip.squake.hardCap": "See uncappedBunnyhopEnabled; if you ever jump while above the hard cap speed (moveSpeed*hardCapThreshold), your speed is set to the hard cap speed",
+  "tooltip.squake.softCapDegen": "The modifier used to calculate speed lost when jumping above the soft cap",
+  "tooltip.squake.increasedFallDistance": "Increases the distance needed to fall in order to take fall damage; this is a server-side setting"
+}

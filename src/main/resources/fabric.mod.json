@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "squake",
+  "version": "${version}",
+  "name": "Squake",
+  "description": "Port of the Squake mod to fabric 1.18. Credit to squeek502 and ZeithComms for the original and 1.16.5 port respectively.",
+  "authors": [
+    "Wide_Cat"
+  ],
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "wide.cat.squake.SquakeClient"
+    ],
+    "modmenu": [
+      "wide.cat.squake.config.SquakeModMenu"
+    ]
+  },
+  "mixins": [
+    "squake.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.12.12",
+    "fabric": "*",
+    "minecraft": "1.18.1"
+  }
+}
