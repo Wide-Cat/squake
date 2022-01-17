@@ -25,8 +25,6 @@ public class SquakeClientPlayer {
 
     private static final List<float[]> baseVelocities = new ArrayList<>();
 
-    private static final Method setDidJumpThisTick = null;
-    private static final Method setIsJumping = null;
     private static final ConfigValues configValues = ConfigHandler.getConfigValues();
 
     public static boolean moveEntityWithHeading(PlayerEntity player, float sidemove, float upmove, float forwardmove) {
@@ -56,20 +54,8 @@ public class SquakeClientPlayer {
         if(!player.world.isClient())
             return;
 
-        if(setDidJumpThisTick != null) {
-            try {
-                setDidJumpThisTick.invoke(null, false);
-            } catch(Exception ignored) {}
-        }
-
         if(!baseVelocities.isEmpty()) {
             baseVelocities.clear();
-        }
-
-        if(setIsJumping != null) {
-            try {
-                setIsJumping.invoke(null, isJumping(player));
-            } catch(Exception ignored) {}
         }
     }
 
@@ -124,12 +110,6 @@ public class SquakeClientPlayer {
         }
 
         quake_Jump(player);
-
-        if(setDidJumpThisTick != null) {
-            try {
-                setDidJumpThisTick.invoke(null, true);
-            } catch(Exception ignored) {}
-        }
     }
 
     /* =================================================
