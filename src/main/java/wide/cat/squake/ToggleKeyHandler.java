@@ -6,7 +6,7 @@ import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.impl.client.keybinding.KeyBindingRegistryImpl;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.KeyBinding;
-import net.minecraft.text.TranslatableText;
+import net.minecraft.text.Text;
 import org.lwjgl.glfw.GLFW;
 import wide.cat.squake.config.ConfigHandler;
 import wide.cat.squake.config.ConfigValues;
@@ -23,8 +23,8 @@ public class ToggleKeyHandler {
                 ConfigValues configValues = ConfigHandler.getConfigValues();
 
                 ConfigHandler.setEnabled(!configValues.enabled);
-                if (configValues.enabled) MinecraftClient.getInstance().inGameHud.getChatHud().addMessage(new TranslatableText("key.squake.toggle.enabled"));
-                else MinecraftClient.getInstance().inGameHud.getChatHud().addMessage(new TranslatableText("key.squake.toggle.disabled"));
+                if (configValues.enabled) MinecraftClient.getInstance().inGameHud.getChatHud().addMessage(Text.translatable("key.squake.toggle.enabled"));
+                else MinecraftClient.getInstance().inGameHud.getChatHud().addMessage(Text.translatable("key.squake.toggle.disabled"));
             }
         });
     }

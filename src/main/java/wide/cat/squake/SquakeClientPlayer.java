@@ -11,15 +11,14 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Box;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.world.chunk.ChunkStatus;
 import wide.cat.squake.config.ConfigHandler;
 import wide.cat.squake.config.ConfigValues;
 import wide.cat.squake.mixins.LivingEntityAccessor;
 
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 public class SquakeClientPlayer {
 
