@@ -58,6 +58,7 @@ public class Motions {
         return Math.abs(val) >= 1.0E-4;
     }
 
+    // this is player.doesNotCollide(x, y, z)
     public static boolean isOffsetPositionInLiquid(PlayerEntity player, double x, double y, double z) {
         Box box = player.getBoundingBox().offset(x, y, z);
         return isLiquidPresentInAABB(player, box);
@@ -65,6 +66,6 @@ public class Motions {
 
     private static boolean isLiquidPresentInAABB(PlayerEntity player, Box bb)
     {
-        return player.world.canCollide(player, bb) && !player.world.containsFluid(bb);
+        return player.world.isSpaceEmpty(player, bb) && !player.world.containsFluid(bb);
     }
 }

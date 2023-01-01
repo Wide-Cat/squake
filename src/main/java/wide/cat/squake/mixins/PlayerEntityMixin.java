@@ -21,7 +21,7 @@ public abstract class PlayerEntityMixin extends LivingEntity {
     @Inject(method = "travel", at = @At("HEAD"), cancellable = true)
     public void moveEntityWithHeading(Vec3d movementInput, CallbackInfo ci) {
         PlayerEntity asPlayer = (PlayerEntity) (LivingEntity) this;
-        if(SquakeClientPlayer.moveEntityWithHeading(asPlayer, (float) movementInput.x, (float) movementInput.y, (float) movementInput.z))
+        if (SquakeClientPlayer.moveEntityWithHeading(asPlayer, (float) movementInput.x, (float) movementInput.y, (float) movementInput.z))
             ci.cancel();
     }
 
