@@ -1,9 +1,7 @@
 package wide.cat.squake;
 
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Box;
 import net.minecraft.util.math.Vec3d;
 
 public class Motions {
@@ -59,6 +57,7 @@ public class Motions {
     }
 
     // this is player.doesNotCollide(x, y, z)
+    /*
     public static boolean isOffsetPositionInLiquid(PlayerEntity player, double x, double y, double z) {
         Box box = player.getBoundingBox().offset(x, y, z);
         return isLiquidPresentInAABB(player, box);
@@ -68,4 +67,5 @@ public class Motions {
     {
         return player.world.isSpaceEmpty(player, bb) && !player.world.containsFluid(bb);
     }
+     */
 }

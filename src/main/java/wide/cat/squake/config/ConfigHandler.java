@@ -55,5 +55,6 @@ public class ConfigHandler {
 
     public static void setEnabled(boolean enabled) {
         configValues.enabled = enabled;
+        save();
     }
 }
