@@ -24,4 +24,5 @@ public class ConfigValues {
     public Boolean drawSpeed = true;
     public Integer xPosition = 10;
     public Integer yPosition = 10;
+    public Double particleMultiplier = 1d;
 }

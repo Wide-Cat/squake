@@ -132,6 +132,13 @@ public class ModConfigScreen {
                 .setTooltip(Text.translatable("tooltip.squake.posY"))
                 .setSaveConsumer(newValue -> configValues.yPosition = newValue)
                 .build());
+        cRender.addEntry(entryBuilder.startDoubleField(Text.translatable("config_value.squake.particleMultiplier"), configValues.particleMultiplier)
+                .setDefaultValue(1)
+                .setMin(0)
+                .setMax(32)
+                .setTooltip(Text.translatable("tooltip.squake.particleMultiplier"))
+                .setSaveConsumer(newValue -> configValues.particleMultiplier = newValue)
+                .build());
 
         builder.setSavingRunnable(ConfigHandler::save);
         this.configScreen = builder.build();

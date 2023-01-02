@@ -193,7 +193,7 @@ public class SquakeClientPlayer {
         Random random = player.getRandom();
 
         if (blockState.getRenderType() != BlockRenderType.INVISIBLE) {
-            for (int iParticle = 0; iParticle < numParticles; iParticle++) {
+            for (int iParticle = 0; iParticle < (int)(numParticles * configValues.particleMultiplier); iParticle++) {
                 player.world.addParticle(new BlockStateParticleEffect(ParticleTypes.BLOCK, blockState), player.getX() + (random.nextFloat() - 0.5D) * player.getWidth(), player.getBoundingBox().minY + 0.1D, player.getZ() + (random.nextFloat() - 0.5D) * player.getWidth(), -motion.x * 4.0D, 1.5D, -motion.z * 4.0D);
             }
         }

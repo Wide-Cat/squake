@@ -26,6 +26,7 @@
   "config_value.squake.drawSpeed": "Draw speed",
   "config_value.squake.posX": "X position",
   "config_value.squake.posY": "Y position",
+  "config_value.squake.particleMultiplier": "Particle multiplier",
 
 
   "tooltip.squake.uncappedBunnyhopEnabled": "If enabled, the soft and hard caps will not be applied at all",
@@ -45,5 +46,6 @@
 
   "tooltip.squake.drawSpeed": "Whether or not to draw the speedometer",
   "tooltip.squake.posX": "The X position of the speedometer",
-  "tooltip.squake.posY": "The Y position of the speedometer"
+  "tooltip.squake.posY": "The Y position of the speedometer",
+  "tooltip.squake.particleMultiplier": "Multiplier to the number of particles spawned"
 }
