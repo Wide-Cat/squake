@@ -19,6 +19,9 @@ public class ConfigValues {
     public Boolean trimpingEnabled = true;
     public Double trimpMult = 1.4D;
 
-
     public Float increasedFallDistance = 0F;
+
+    public Boolean drawSpeed = true;
+    public Integer xPosition = 10;
+    public Integer yPosition = 10;
 }

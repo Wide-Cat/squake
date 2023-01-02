@@ -11,7 +11,6 @@ import org.lwjgl.glfw.GLFW;
 import wide.cat.squake.config.ConfigHandler;
 import wide.cat.squake.config.ConfigValues;
 
-
 @Environment(EnvType.CLIENT)
 public class ToggleKeyHandler {
     private static final KeyBinding TOGGLE_KEY = new KeyBinding("key.squake.toggle", GLFW.GLFW_KEY_COMMA, "key.categories.squake");

@@ -6,6 +6,7 @@
 
   "title.squake.config": "Squake Config",
   "title.squake.general": "General",
+  "title.squake.render": "Render",
 
   "config_value.squake.enabled": "Enabled",
   "config_value.squake.sharkingEnabled": "Sharking enabled",
@@ -22,6 +23,9 @@
   "config_value.squake.softCapDegen": "Soft cap degeneration",
   "config_value.squake.increasedFallDistance": "Increased fall distance",
 
+  "config_value.squake.drawSpeed": "Draw speed",
+  "config_value.squake.posX": "X position",
+  "config_value.squake.posY": "Y position",
 
 
   "tooltip.squake.uncappedBunnyhopEnabled": "If enabled, the soft and hard caps will not be applied at all",
@@ -31,15 +35,15 @@
   "tooltip.squake.hardCap": "See uncappedBunnyhopEnabled; if you ever jump while above the hard cap speed (moveSpeed*hardCapThreshold), your speed is set to the hard cap speed",
   "tooltip.squake.softCap": "See uncappedBunnyhopEnabled and softCapDegen; soft cap speed = (moveSpeed*softCapThreshold)",
   "tooltip.squake.softCapDegen": "The modifier used to calculate speed lost when jumping above the soft cap",
-
   "tooltip.squake.sharkingEnabled": "If enabled, holding jump while swimming at the surface of water allows you to glide",
   "tooltip.squake.sharkingWaterFriction": "Amount of friction while sharking (between 0 and 1). Strongly recommended to be no lower than 0.95.",
   "tooltip.squake.sharkingSurfTension": "Amount of downward momentum you retain while entering water, a lower value means that you are able to shark after hitting the water from higher up",
-
   "tooltip.squake.trimpingEnabled": "If enabled, holding sneak while jumping will convert your horizontal speed into vertical speed",
   "tooltip.squake.trimpMult": "A lower value means less horizontal speed converted to vertical speed and vice versa",
-
   "tooltip.squake.increasedFallDistance": "Increases the distance needed to fall in order to take fall damage; this is a server-side setting",
+  "tooltip.squake.enabled": "Turns off/on the quake-style movement for the client (essentially the saved value of the ingame toggle keybind)",
 
-  "tooltip.squake.enabled": "Turns off/on the quake-style movement for the client (essentially the saved value of the ingame toggle keybind)"
+  "tooltip.squake.drawSpeed": "Whether or not to draw the speedometer",
+  "tooltip.squake.posX": "The X position of the speedometer",
+  "tooltip.squake.posY": "The Y position of the speedometer"
 }
